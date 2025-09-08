@@ -1,5 +1,12 @@
-venv
-./venv
-env
-model.h5
-cnnCat2.h5
+# Node modules
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# System files
+.DS_Store
