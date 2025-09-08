@@ -1,12 +1,5 @@
-# Node modules
-node_modules/
-
-# Python cache
-__pycache__/
-*.pyc
-
-# Environment files
-.env
-
-# System files
-.DS_Store
+echo "models/model.h5" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo ".env" >> .gitignore
+echo ".DS_Store" >> .gitignore
