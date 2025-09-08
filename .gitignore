@@ -3,3 +3,7 @@ echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 echo ".env" >> .gitignore
 echo ".DS_Store" >> .gitignore
+venv/
+echo "models/model.h5" >> .gitignore
+git add .gitignore
+git commit -m "Ignore large model file"
