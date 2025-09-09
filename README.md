@@ -1,5 +1,6 @@
 
 
+
 # Drowsiness Detection Using Deep Learning
 
 ## Introduction
@@ -37,20 +38,48 @@ source venv/bin/activate
 
 ### 3️⃣ Install dependencies
 
-Make sure your Python version is **3.11** for TensorFlow 2.14 compatibility. Then run:
+Make sure your Python version is **3.11** for TensorFlow compatibility. Then run:
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the project
+### 4️⃣ Download Haar cascades for eye/face detection (if not included)
 
-If the main Python file is `main.py` (or `app.py`), run:
+OpenCV uses XML files for detection. You can download them from OpenCV GitHub:
+
+```bash
+# Example for eye cascade
+# Download and place in the project folder or utils/
+wget https://github.com/opencv/opencv/raw/master/data/haarcascades/haarcascade_eye.xml
+wget https://github.com/opencv/opencv/raw/master/data/haarcascades/haarcascade_frontalface_default.xml
+```
+
+### 5️⃣ Check the model path
+
+Make sure your pre-trained model (`.h5` file) is in the `models/` folder and your code points to it correctly:
+
+```python
+# Example in main.py
+model = load_model("models/drowsiness_model.h5")
+```
+
+### 6️⃣ Ensure alert sound exists (if used)
+
+If your code plays a sound for drowsiness detection, make sure the file exists:
+
+```
+assets/alert.wav
+```
+
+### 7️⃣ Run the project
 
 ```bash
 python main.py
 ```
+
+A webcam window should open, and the system will monitor your eyes. If drowsiness is detected, you will get an alert.
 
 ---
 
@@ -84,6 +113,9 @@ drowsiness-detection-project_final/
 │   └── utils.py
 ├── assets/               # Any images, sounds, or media files
 │   └── alert.wav
+├── haarcascades/         # Optional: downloaded OpenCV XML files
+│   ├── haarcascade_eye.xml
+│   └── haarcascade_frontalface_default.xml
 └── README.md             # Project documentation
 ```
 
@@ -117,7 +149,10 @@ drowsiness-detection-project_final/
 ## Notes
 
 * Make sure your webcam is working
-* Use Python 3.11 for compatibility with TensorFlow 2.14
+* Use Python 3.11 for compatibility with TensorFlow 2.14+
+* Download Haar cascade XML files if not included
+* Make sure your `.h5` model path is correct in the code
+* Ensure alert sound file exists if used
 * Adjust the alert threshold in the code if needed
 
 
