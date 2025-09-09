@@ -1,4 +1,3 @@
-Ah, got it! You want the **actual `requirements.txt` content** to be shown **outside the code blocks** in the README so readers can see it clearly, and all bash/code instructions stay clean. Here’s the cleaned-up, ready-to-paste `README.md`:
 
 ````markdown
 # Drowsiness Detection Using Deep Learning
@@ -121,10 +120,4 @@ drowsiness-detection-project_final/
 * Use Python 3.11 for compatibility with TensorFlow 2.14
 * Adjust the alert threshold in the code if needed
 
-```
 
----
-
-
-Do you want me to do that?
-```
