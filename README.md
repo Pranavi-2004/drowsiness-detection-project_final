@@ -36,3 +36,22 @@ pip install -r requirements.txt
 # Detects eyes using OpenCV’s Haar cascades
 # Predicts if eyes are open or closed
 # Triggers an alert if drowsiness is detected for a continuous period
+
+### Create a virtual environment
+# Windows
+python -m venv venv
+venv\Scripts\activate
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+
+### Install dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+
+### Run the project
+If the main Python file is main.py (or app.py), run:
+python main.py
+
+
+
